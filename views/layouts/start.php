@@ -43,13 +43,13 @@ AppAsset::register($this);
             <ul class="title-area">
                <li class="name">
                   <h1>
-                     <a href="index.html">
+                     <a href="/user">
                      <img src="img/header-logo.png" alt="Creditstar" />
                      <span class="invisible">Creditstar</span>
                      </a>
                   </h1>
                </li>
-               <li class="toggle-topbar menu-icon"><a href="index.html#"><span>Menüü</span></a></li>
+               <li class="toggle-topbar menu-icon"><a href="/user"><span>Menüü</span></a></li>
             </ul>
             <section class="top-bar-section">
                <ul class="right">
@@ -69,8 +69,8 @@ AppAsset::register($this);
             <div class="top-bar submenu">
                <section class="top-bar-section">
                   <ul>
-                     <li class=""><a href="#">Users</a></li>
-                     <li class=""><a href="#">Loans</a></li>
+                     <li class=""><a href="/user">Users</a></li>
+                     <li class=""><a href="/loan">Loans</a></li>
                   </ul>
                </section>
             </div>

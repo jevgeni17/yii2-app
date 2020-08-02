@@ -11,34 +11,38 @@ $this->params['breadcrumbs'][] = ['label' => 'Loans', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="loan-view">
+<div class="container h-100">
+  <div class="row h-100 justify-content-center align-items-center">
+  <div class="loan-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+<h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
-                'method' => 'post',
-            ],
-        ]) ?>
-    </p>
-
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id',
-            'user_id',
-            'amount',
-            'interest',
-            'duration',
-            'start_date',
-            'end_date',
-            'campaign',
-            'status:boolean',
+<p>
+    <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+    <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        'class' => 'btn btn-danger',
+        'data' => [
+            'confirm' => 'Are you sure you want to delete this item?',
+            'method' => 'post',
         ],
     ]) ?>
+</p>
 
-</div>
+<?= DetailView::widget([
+    'model' => $model,
+    'attributes' => [
+        'id',
+        'user_id',
+        'amount',
+        'interest',
+        'duration',
+        'start_date',
+        'end_date',
+        'campaign',
+        'status:boolean',
+    ],
+]) ?>
+
+</div> 
+  </div
+

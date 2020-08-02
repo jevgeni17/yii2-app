@@ -9,33 +9,36 @@ use yii\grid\GridView;
 $this->title = 'Loans';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="loan-index">
+<div class="container h-100">
+  <div class="row h-100 justify-content-center align-items-center">
+  <div class="loan-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+<h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        <?= Html::a('Create Loan', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+<p>
+    <?= Html::a('Create Loan', ['create'], ['class' => 'btn button-orange']) ?>
+</p>
 
+<div class="row">
+      <div class="col-6">
+<?= GridView::widget([
+    'dataProvider' => $dataProvider,
+    'columns' => [
+        ['class' => 'yii\grid\SerialColumn'],
 
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+        'id',
+        'user_id',
+        'amount',
+        'interest',
+        'duration',
+        //'start_date',
+        //'end_date',
+        //'campaign',
+        //'status:boolean',
 
-            'id',
-            'user_id',
-            'amount',
-            'interest',
-            'duration',
-            //'start_date',
-            //'end_date',
-            //'campaign',
-            //'status:boolean',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
-
-
+        ['class' => 'yii\grid\ActionColumn'],
+    ],
+]); ?>
 </div>
+  </div>
+

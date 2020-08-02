@@ -20,7 +20,9 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
+        'https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=latin,latin-ext,cyrillic,cyrillic-ext',
+        'css/foundation.css',
+        'css/smslaen.css',
     ];
     public $js = [
     ];

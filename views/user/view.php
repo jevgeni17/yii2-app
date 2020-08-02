@@ -7,7 +7,7 @@ use app\components;
 /* @var $this yii\web\View */
 /* @var $model app\models\User */
 
-function getAgeFromPersonalCode($personal_code)
+function getAge($personal_code)
 {
 	$personal_code = strval($personal_code);
 
@@ -27,7 +27,7 @@ function getAgeFromPersonalCode($personal_code)
 }
 
 
- function calculateAge($birthday, $century)
+function calculateAge($birthday, $century)
 {
 	$birthday = $century.$birthday;
 
@@ -80,7 +80,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'lang:ntext',
         [
             'label' => 'Age',
-            'value' =>  getAgeFromPersonelCode($model->personal_code),
+            'value' =>  getAge($model->personal_code),
         ],
     ],
 ]) ?>
